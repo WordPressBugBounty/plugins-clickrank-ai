@@ -1,0 +1,42 @@
+/**
+ * All custom administrative styles for the ClickRank.ai plugin.
+ *
+ * @package    ClickRank_AI
+ * @since      3.1.0
+ */
+
+/*
+ * Target the ClickRank.ai menu item icon in all its states (default, current, and open)
+ * to ensure the size and padding remain consistent. Using !important to override
+ * default WordPress admin styles that change on hover or when the menu is active.
+ */
+#toplevel_page_clickrank-ai .wp-menu-image img,
+#toplevel_page_clickrank-ai.current .wp-menu-image img,
+#toplevel_page_clickrank-ai.wp-menu-open .wp-menu-image img {
+	height: 20px !important;
+	width: auto !important; /* Let width adjust to maintain the aspect ratio */
+	padding: 7px 10px 4px 10px ; /* Your desired padding */
+	box-sizing: content-box !important; /* Ensures padding is applied consistently */
+}
+
+/*
+ * Styles for the pagination on the logs tab.
+ */
+.pagination-links a,
+.pagination-links span {
+	padding: 6px 12px;
+	border: 1px solid #ddd;
+	text-decoration: none;
+	color: #007cba;
+	margin-left: -1px;
+	background: white;
+}
+.pagination-links span.current {
+	background-color: #007cba;
+	color: white;
+	border-color: #007cba;
+	z-index: 1;
+}
+.pagination-links a:hover {
+	background-color: #f0f0f1;
+}
